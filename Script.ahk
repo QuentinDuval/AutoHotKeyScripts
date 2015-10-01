@@ -7,7 +7,8 @@
 	send, ^s ; save the script
 	Reload
 	return
-  
+
+
 ; --------------------------------
 ; Search mechanism
 ; --------------------------------
@@ -16,8 +17,9 @@
 	Send, ^c
 	Menu, PopUpMenu, Add, Search Google, SearchGoogle
 	Menu, PopUpMenu, Add, Search Hackage, SearchHackage
-	Menu, PopUpMenu, Add
 	Menu, PopUpMenu, Add, Search Youtube, SearchYoutube
+	Menu, PopUpMenu, Add
+	Menu, PopUpMenu, Add, Open folder, OpenFolder
 	Menu, PopUpMenu, Show
 	Menu, PopUpMenu, DeleteAll
 	return	
@@ -32,6 +34,10 @@ SearchHackage:
 	
 SearchYoutube:
 	Run, https://www.youtube.com/results?search_query=%clipboard%
+	return
+
+OpenFolder:
+	Run, explorer %clipboard%
 	return
 	
 	
