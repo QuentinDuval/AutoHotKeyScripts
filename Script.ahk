@@ -16,8 +16,10 @@
 #s::
 	Send, ^c
 	Menu, PopUpMenu, Add, Search Google, SearchGoogle
-	Menu, PopUpMenu, Add, Search Hackage, SearchHackage
 	Menu, PopUpMenu, Add, Search Youtube, SearchYoutube
+	Menu, PopUpMenu, Add
+	Menu, PopUpMenu, Add, Search Hoogle, SearchHoogle
+	Menu, PopUpMenu, Add, Search Hackage, SearchHackage
 	Menu, PopUpMenu, Add
 	Menu, PopUpMenu, Add, Open folder, OpenFolder
 	Menu, PopUpMenu, Show
@@ -30,6 +32,10 @@ SearchGoogle:
 	
 SearchHackage:
 	Run, http://hackage.haskell.org/packages/search?terms=%clipboard%
+	return
+
+SearchHoogle:
+	Run, https://www.haskell.org/hoogle/?hoogle=%clipboard%
 	return
 	
 SearchYoutube:
